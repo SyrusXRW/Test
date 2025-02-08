@@ -9,8 +9,8 @@ label start:
     show sam blush
 
     s "I guess you like me"
-menu: 
-
+menu:
+    
     "Yes, I do.": 
         $ sam_affection +1
     "No, I don't.":

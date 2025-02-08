@@ -8,8 +8,6 @@ label end:
     "You are in \"label end\""
     return
 
-
-
 #############################################################################################
 ## IMAGE BUTTON
 screen zeil_learnings_logo: 
