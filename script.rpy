@@ -12,11 +12,11 @@ label start:
 menu:
     
     "Yes, I do.": 
-        $ sam_affection +1
+        $ sam_affection +2
     "No, I don't.":
         $ sam_affection -1
 label ending_evaluation:
-    if sam_affection == 1:
+    if sam_affection <= 1:
         jump sam_best_ending
     elif sam_affection == 0:
         jump sam_bad_ending
@@ -27,3 +27,8 @@ label sam_bad_ending:
     s "I'll see you then"
 
     jump point_and_click 
+
+label huh: 
+    "did it work?"
+
+    return 
