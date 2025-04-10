@@ -1,17 +1,19 @@
 ﻿screen inventory_display_toggle:
-    window:
-        imagebutton:
-            xalign 0.05
-            yalign 0.1
-            auto "inventory_%s.png"
+    zorder 92
+    frame:
+        background "#9F99"
+        xalign 0.05
+        yalign 0.1
+
+        textbutton "Inventory":
             action ToggleScreen("inventory_item_description")
 
     on "hide" action Hide("inventory_item_description")
 
 
-default item_descriptions = {"Note" : "a clue to where to"}
-default inventory_items = [0]
-default item_description = "Blank"
+default item_descriptions = {"note" : "a mysterious note"}
+default inventory_items = []
+default item_description = ""
 
 style inv_button is frame:
     xsize 200
