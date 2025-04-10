@@ -10,13 +10,15 @@ image Streets = "Streets.PNG"
 #This will be a way to show all the differnet coding ways 
 
 label start:
+    show screen inventory_display_toggle
     show Streets
 
     show marco sprite at truecenter 
     #The Game has different ways to position things for characters it's at "Truecenter, Left, Right"
 
     show alexi sprite at left
-
+    $ inventory_items.append("note")
+    s "We got a clue"
     a "We should probably see the next clue"
 
 menu:
@@ -36,8 +38,6 @@ label sam_best_ending:
     a "I think we can go to the Library"
 label sam_bad_ending: 
     a "Let's head back then"
-
-    jump point_and_click 
 
 label huh: 
     "did it work?"
