@@ -8,10 +8,11 @@ define e = Character("")
 init python:
     def drag_placed(drags, drop):
         if not drop:
-            return
-
+            return 
         store.draggable = drags[0].drag_name
-        store.droppable = drop.drag_name
+        store.droppable = drop.drag_name 
+    def drag_clicked(): 
+        print("a drag was clicked")
 
         return True
 
@@ -39,6 +40,7 @@ screen drag_sample2:
             droppable False
             dragged drag_placed
             drag_raise True
+            clicked drag_clicked 
         drag:
             drag_name "triangle"
             child "Polaroid.png"

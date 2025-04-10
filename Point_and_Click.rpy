@@ -1,6 +1,6 @@
 ﻿## START
 label point_and_click:
-    scene bg peach
+    scene railroad
     "You are in \"label start\""
     call screen zeil_learnings_logo
 

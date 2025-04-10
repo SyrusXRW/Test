@@ -1,30 +1,41 @@
 ﻿
-define s = Character("Sam")
-default sam_affection = 0
+define s = Character("Marco")
+define a = Character("Alexi")
+default alexi_affection = 0 
+
+image Streets = "Streets.PNG" 
+#to define images have lowercase 
+#image Insert name = "File name.png"
+
+#This will be a way to show all the differnet coding ways 
 
 label start:
+    show Streets
 
-    scene bg room
+    show marco sprite at truecenter 
+    #The Game has different ways to position things for characters it's at "Truecenter, Left, Right"
 
-    show sam blush
+    show alexi sprite at left
 
-    s "I guess you like me"
+    a "We should probably see the next clue"
+
 menu:
-    
-    "Yes, I do.": 
-        $ sam_affection +2
-    "No, I don't.":
-        $ sam_affection -1
+    "Any clue where to?": 
+        $ alexi_affection +1
+    "I think we shouldn't": 
+        a "I see..."
+
+
 label ending_evaluation:
-    if sam_affection <= 1:
+    if alexi_affection == 1:
         jump sam_best_ending
-    elif sam_affection == 0:
+    else: 
         jump sam_bad_ending
 
 label sam_best_ending:
-    s "I love you"
+    a "I think we can go to the Library"
 label sam_bad_ending: 
-    s "I'll see you then"
+    a "Let's head back then"
 
     jump point_and_click 
 
