@@ -17,7 +17,7 @@ label start:
     #The Game has different ways to position things for characters it's at "Truecenter, Left, Right"
 
     show alexi sprite at left
-    
+
     $ inventory_items.append("note")
 
     s "We got a clue"

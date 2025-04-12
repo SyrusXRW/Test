@@ -8,10 +8,9 @@
     on "hide" action Hide("inventory_item_description")
 
 
-default item_descriptions = {"note" : "a mysterious note" : ""}
+default item_descriptions = {"note" : "a mysterious note"}
 default inventory_items = []
 default item_description = ""
-default inventory_image = 
 
 # style inv_button is frame:
 #     xsize 200
@@ -39,7 +38,7 @@ screen inventory_item_description:
             xfill True
             yfill True
 #Above is for description text, Below is Items 
-    window:
+    frame:
         background "#9999ff00"
         xsize 1290
         ysize 600
@@ -55,7 +54,5 @@ screen inventory_item_description:
             for item in inventory_items:
                 textbutton item:
                     action SetVariable("item_description", item_descriptions.get(item))
-                    selected False
-
 
     on "hide" action SetVariable("item_description", "")
