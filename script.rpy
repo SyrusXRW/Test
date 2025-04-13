@@ -18,7 +18,10 @@ label start:
 
     show alexi sprite at left
 
-    $ inventory.append(InventoryItem("note", "A mysterious note", "note.png"))
+    $ clue1 = InventoryItem("note", "a mysterious note", "note.png")
+    $ clue2 = InventoryItem("photo", "A picture of the Victim", "polaroid.png")
+    $ inventory.append(clue1)
+    $ inventory.append(clue2)
     s "We got a clue"
     a "We should probably see the next clue"
 

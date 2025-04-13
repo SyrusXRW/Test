@@ -25,10 +25,10 @@ screen inventory_display_toggle:
             action ToggleScreen("inventory_item_description")
     on "hide" action Hide("inventory_item_description")
 
-
+default clue_index = 1
 default inventory = []
 default item_description = ""
-default placeholder_item = {"Note", "A mysterious note", "journal_%s.png"}
+default placeholder_item = {"Note" , "A mysterious note", "journal_%s.png"}
 
 # # style inv_button is frame:
 # #     xsize 200
@@ -53,7 +53,7 @@ screen inventory_item_description:
         xalign 0.5
         yalign 0.1
         text item_description:
-            xfill True
+            xfill True 
             yfill True
 # #Above is for description text, Below is Items 
     frame:
@@ -70,11 +70,8 @@ screen inventory_item_description:
             yoffset 20
             style_prefix "inv"
             for item in inventory:
-                # add [item.img]
                 imagebutton:
                     idle item.img
-                    action SetVariable("item_description", InventoryItem)
-                    selected False
-
-    on "hide" action SetVariable("item_description", "")
+                    action SetVariable("item_description", item.description)
+    on "hide" action SetVariable(item_description, "")
     #     # for item in inventory.items:
