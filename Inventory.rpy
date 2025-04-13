@@ -30,18 +30,6 @@ default inventory = []
 default item_description = ""
 default placeholder_item = {"Note" , "A mysterious note", "journal_%s.png"}
 
-# # style inv_button is frame:
-# #     xsize 200
-# #     ysize 100
-
-# # style inv_button_text:
-# #     xalign 0.5
-# #     yalign 0.5
-
-# # style inv_image:
-# #     xalign 0.5
-# #     yalign 0.5
-
 screen inventory_item_description:
     image "#3d3d3dff"
     # use this based on your preference
@@ -74,4 +62,3 @@ screen inventory_item_description:
                     idle item.img
                     action SetVariable("item_description", item.description)
     on "hide" action SetVariable(item_description, "")
-    #     # for item in inventory.items:
