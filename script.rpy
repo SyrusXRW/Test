@@ -18,7 +18,7 @@ label start:
 
     show alexi sprite at left
 
-    $ inventory.append(InventoryItem("note", "A mysterious note", "note.png", "A mysterious note"))
+    $ inventory.append(InventoryItem("note", "A mysterious note", "note.png"))
     s "We got a clue"
     a "We should probably see the next clue"
 
